@@ -1,0 +1,104 @@
+/* Reset simples */
+/* Remove espaçamentos padrão e usa box-sizing mais previsível */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Layout base */
+/* Estilos base do documento: fonte, cor e espaçamento geral */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.5;           /* distância entre linhas */
+  color: #222;                /* cor do texto */
+  background: #f6f8fa;        /* cor de fundo suave */
+  padding: 20px;              /* espaço interno ao redor da página */
+}
+
+/* Cabeçalho e navegação */
+/* Cabeçalho simples com título e navegação alinhados */
+header {
+  display: flex;               /* coloca título e nav na mesma linha */
+  align-items: center;         /* alinha verticalmente */
+  justify-content: space-between; /* espaço entre título e menu */
+  background: #0b74de;         /* cor sólida simples */
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+header h1 { font-size: 1.25rem; margin: 0; }
+header nav ul { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; }
+header nav a { color: #fff; text-decoration: none; font-weight: 600; }
+
+/* Seções */
+/* Blocos de seção com fundo branco e leve sombra */
+section { background: #fff; padding: 14px; border-radius: 6px; margin-bottom: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+section h2 { margin-bottom: 10px; color: #0b2d4a; font-size: 1.05rem; }
+
+/* Imagem de perfil */
+/* Sobre mim: layout com imagem ao lado do conteúdo */
+/* Layout simples para a seção 'Sobre mim' */
+.sobre-inner { display: flex; gap: 14px; align-items: flex-start; }
+.sobre-content { max-width: 760px; }
+#sobre img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; flex: 0 0 100px; }
+
+/* Tabela — visual moderno e legível */
+/* Tabela básica: legível e responsiva horizontalmente */
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;  /* remove espaçamento entre células */
+  background: transparent;
+}
+th, td {
+  padding: 8px 10px;         /* espaçamento interno nas células */
+  text-align: left;
+  border-bottom: 1px solid #e9eef6; /* linha suave entre linhas */
+}
+thead th {
+  background: #f2f7fb;       /* fundo claro no cabeçalho */
+  color: #08324b;
+  font-weight: 700;
+}
+tbody tr:nth-child(odd) { background: #ffffff; }
+tbody tr:hover { background: #f7fbff; }
+
+/* Destaques de colspan/rowspan (opcional) */
+th[colspan], td[colspan], td[rowspan] {
+  background: #e9f3ff;
+  font-weight: 600;
+}
+
+/* Formulário */
+/* Inputs de formulário com estilo simples */
+form label { display: block; margin-top: 8px; font-size: 0.95rem; color: #0b2d4a; }
+input[type="text"], input[type="email"], input[type="telefone"], select, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d9e9f8;
+  margin-top: 6px;
+  background: #fff;
+}
+
+/* Botão */
+/* Botão de envio simples */
+input[type="submit"]{
+  margin-top: 10px;
+  background: #0b74de;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+input[type="submit"]:hover{ background: #095fb0; }
+
+/* Responsivo: empilha conteúdo em telas pequenas */
+/* Ajustes simples para telas pequenas */
+@media (max-width: 640px) {
+  header { flex-direction: column; gap: 10px; align-items: flex-start; }
+  header nav ul { flex-wrap: wrap; gap: 8px; }
+  .sobre-inner { flex-direction: column; align-items: center; text-align: center; }
+  #sobre img { margin-bottom: 10px; }
+  table { font-size: 0.95rem; }
+}
