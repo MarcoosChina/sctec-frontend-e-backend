@@ -1,0 +1,94 @@
+.img{ /* seletor para imagens usadas no layout (classe .img) */
+    max-width: 100%; /* limita a largura para evitar overflow em telas pequenas */
+    display: block; /* exibe a imagem como bloco, removendo espaço inline */
+    margin: 0 0 12px 0; /* margem: top 0 | right 0 | bottom 12px | left 0 */
+} /* fim .img */
+.img2{ /* seletor para imagens alternativas (classe .img2) */
+    max-width: 100%; /* largura máxima responsiva */
+    display: block; /* mostra como bloco */
+    margin: 0 0 12px 0; /* margem inferior para espaçamento */
+} /* fim .img2 */
+
+#header{  /* cabeçalho fixo/centralizado */
+    display: flex; /* layout flex para alinhar conteúdo horizontalmente */
+    justify-content: center; /* centraliza conteúdo horizontalmente */
+    align-items: center; /* centraliza conteúdo verticalmente */
+    background-color: rgb(67, 70, 70); /* cor de fundo do cabeçalho */
+    position: sticky; /* mantém o cabeçalho visível ao rolar */
+    position: -webkit-sticky; /* compatibilidade para navegadores WebKit */
+    top: 0; /* fixa no topo da viewport */
+    border: solid black 1px; /* borda preta de 1px */
+    padding: 14px 0; /* espaçamento vertical interno */
+    z-index: 40; /* assegura que fique acima de outros elementos */
+} /* fim #header */
+
+/* Layout grid: left sidebar | main | right sidebar */
+.layout{ /* container principal em grid */
+    display: grid; /* usa CSS Grid para 3 colunas */
+    grid-template-columns: 260px 1fr 260px; /* colunas: sidebar | conteúdo | sidebar */
+    gap: 20px; /* espaçamento entre colunas */
+    max-width: 1200px; /* largura máxima do container */
+    margin: 20px auto; /* centraliza horizontalmente e adiciona margem superior/ inferior */
+    padding: 0 16px; /* padding lateral para respiração em telas pequenas */
+    align-items: start; /* alinhamento vertical dos itens no topo */
+} /* fim .layout */
+
+.sidebar{ /* estilo base para ambas as sidebars */
+    background: #f5f5f5; /* cor de fundo suave */
+    padding: 12px; /* espaçamento interno */
+    border-radius: 6px; /* cantos arredondados */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); /* sombra sutil */
+    position: sticky; /* sidebar fica fixa ao rolar dentro do container */
+    top: 84px; /* distância do topo quando fixa (abaixo do header) */
+    height: -moz-fit-content; /* compatibilidade Firefox para auto-fit */
+    height: fit-content; /* altura se ajusta ao conteúdo */
+} /* fim .sidebar */
+
+.sidebar img{ /* imagens dentro das sidebars */
+    width: 100%; /* ocupa toda a largura da sidebar */
+    height: auto; /* mantém proporção */
+    display: block; /* evita gaps inline */
+    margin-bottom: 10px; /* separação abaixo da imagem */
+} /* fim .sidebar img */
+
+.main-content{ /* área principal de conteúdo */
+    background: #fff; /* fundo branco para contraste */
+    padding: 18px; /* espaçamento interno */
+    border-radius: 6px; /* cantos arredondados */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* sombra leve */
+} /* fim .main-content */
+
+.main-content h2{ /* título dentro do conteúdo principal */
+    margin-top: 0; /* remove margem superior padrão do h2 */
+} /* fim .main-content h2 */
+
+.sidebar-text{ /* texto dentro das sidebars */
+    font-size: 0.95rem; /* tamanho de fonte levemente menor que o padrão */
+    color: #333; /* cor do texto */
+} /* fim .sidebar-text */
+
+/* Responsividade: empilha sidebars em telas médias e oculta em telas muito pequenas */
+@media (max-width: 1000px){ /* ponto de quebra para telas médias */
+    .layout{ grid-template-columns: 200px 1fr 200px; } /* reduz largura das sidebars */
+} /* fim media 1000px */
+
+@media (max-width: 800px){ /* ponto de quebra para tablets e celulares maiores */
+    .layout{ grid-template-columns: 1fr; } /* uma coluna: empilha tudo */
+    .sidebar{ position: static; top: auto; } /* sidebars deixam de ser sticky */
+    .sidebar.left{ order: 1; } /* define ordem visual para left */
+    .main-content{ order: 2; } /* conteúdo principal aparece em segundo */
+    .sidebar.right{ order: 3; } /* right aparece por último */
+} /* fim media 800px */
+
+@media (max-width: 480px){ /* telas muito pequenas (celulares) */
+    .sidebar{ display: none; } /* oculta sidebars para foco no conteúdo */
+    .main-content{ padding: 14px; } /* reduz padding do conteúdo */
+} /* fim media 480px */
+
+/* Pequenos ajustes de tipografia */
+body{ /* estilos globais do corpo da página */
+    font-family: Arial, Helvetica, sans-serif; /* família de fontes */
+    line-height: 1.6; /* espaçamento entre linhas para legibilidade */
+    color: #222; /* cor principal do texto */
+    background: #fafafa; /* cor de fundo da página */
+} /* fim body */
