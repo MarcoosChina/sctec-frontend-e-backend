@@ -1,0 +1,68 @@
+*{
+    font-family: "press-start-2p", cursive;
+    font-weight: 100;
+}
+
+input[type= "submit"]{
+    background-color: #214da0;
+    color: rgb(255, 255, 255);
+    border: 1px solid #1a3a7a;
+    padding: 8px 12px;
+    border-radius: 6px; 
+    cursor: pointer;
+}
+
+#p1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #585858;
+}
+body{
+    background-color: #f2f7fb;
+}
+form{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #e9eef6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0 1);
+}
+
+#escolaridade {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#materia{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nome{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#email{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#idade{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#telefone{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

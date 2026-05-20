@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleform.css">
     <title>Formulário</title>
 </head>
+
 <body>
     <section>
         <h1>Candidatação</h1>
-        <p>Preencha o formulário abaixo para se candidatar a uma vaga de emprego.</p>
-        <form action = "" id="form">
+        <p id="p1">Preencha o formulário abaixo para se candidatar a uma vaga de emprego.</p>
+        <form action="" id="form">
             <label for="nome">Nome completo:</label>
-            <input type="text" id = "nome" name="nome" required><br>
+            <input type="text" id="nome" name="nome" required><br>
             <label for="email">E-mail:</label>
-            <input type="email" id = "email" name="email" required><br>
+            <input type="email" id="email" name="email" required><br>
             <label for="idade">Idade:</label>
-            <input type="number" id = "idade" name="idade" required><br>
+            <input type="number" id="idade" name="idade" required><br>
             <label for="telefone">Telefone:</label>
-            <input type="telefone" id = "telefone" name="telefone" required><br><br>
+            <input type="telefone" id="telefone" name="telefone" required><br><br>
             <label for="materia">Matéria escolhida:</label>
             <select name="materia" id="materia" required>
                 <option value="matematica">Matemática</option>
@@ -26,6 +29,7 @@
                 <option value="geografia">Geografia</option>
                 <option value="artes">Artes</option>
             </select>
+
             <br><br>
             <label for="escolaridade">Nivel de Escolaridade:</label>
             <select name="escolaridade" id="escolaridade" required>
@@ -42,6 +46,7 @@
             <input type="submit" value="Enviar candidatura">
         </form>
     </section>
-    
+
 </body>
+
 </html>
