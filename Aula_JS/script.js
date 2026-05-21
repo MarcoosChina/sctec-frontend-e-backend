@@ -1,11 +1,14 @@
-function varTeste1()
-{
-    var num1 = 10;
-    if (num1 >= 10){
-        console.log("O número é maior ou igual a 10");
-    }
-    else{
-        console.log("O número é menor que 10");
+function verificaAprovacao(){
+    let nota = document.getElementById("nota").value;
+    console.log("Nota inserida: ",nota);
+
+    if (nota >= 7){
+        document.getElementById("resultado").innerHTML = "Aluno aprovado";
+        document.getElementById("resultado").style.color = "green";
+        alert("Aluno aprovado!");
+    }else{
+        document.getElementById("resultado").innerHTML = "Aluno reprovado";
+        document.getElementById("resultado").style.color = "red";
+        alert("Aluno reprovado!");
     }
 }
-varTeste1();
