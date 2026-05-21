@@ -1,0 +1,32 @@
+*{
+    font-family: Arial, Helvetica, sans-serif; /* define a fonte para todo o documento */
+}
+body{
+    margin: 0; /* remove margens padrão do body */
+}
+header{
+    background-color: #696969;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+main{
+    display: grid; /* usa grid layout para organizar o conteúdo */
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); /* colunas responsivas que se ajustam ao tamanho da tela */ 
+    gap: 20px; /* espaço entre os itens do grid */
+    padding: 20px; /* espaçamento interno do main */
+}
+.content{
+    background-color: #c7c1c1;
+    padding: 20px;
+    border-radius: 10px;
+}
+footer{
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* fixa o rodapé na parte inferior da página */
+    bottom: 0; /* posiciona o rodapé no fundo da janela */
+    width: 100%; /* faz o rodapé ocupar toda a largura da página */
+}
