@@ -1,7 +1,8 @@
 const listadecompras = ["leite", "pão", "queijo", "presunto", "manteiga"];
 console.log(listadecompras);
-console.log(listadecompras[0]);
-console.log(listadecompras[1]);
-console.log(listadecompras[2]);
-console.log(listadecompras[3]);
-console.log(listadecompras[4]);
+//adicionando um item a lista
+listadecompras[5] = "iogurte";
+console.log(listadecompras);
+//adicionando um item a lista usando o método push
+listadecompras.push("frutas");
+console.log(listadecompras);
