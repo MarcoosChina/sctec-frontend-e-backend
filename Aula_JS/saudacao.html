@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../Aula_JS/saudacao.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            margin-top: 5px;
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    </style>
+    <h1>Saudação personalizada</h1>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome">
+    <label for="horario">Escolha o horário:</label>
+    <select id="horario">
+        <option value="manha">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="noite">Noite</option>
+    </select>
+    <button onclick = "saudar()">Saudar</button>
+    <p id = "mensagem"></p>
+</body>
+</html>
