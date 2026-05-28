@@ -16,5 +16,4 @@ function tratarClique(evento){
     evento.target.textContent = jogadorAtualX ? 'X' : 'O';
     jogadorAtualX = !jogadorAtualX;
 }
-
 iniciarJogo();
