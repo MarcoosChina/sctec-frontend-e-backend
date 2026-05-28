@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
     <style>
-     
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .tabuleiro {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .celula {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 46px;
+            cursor: pointer;
+        }
+        #reiniciar {
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <h1>Jogo da Velha</h1>
-    <div id = "tabuleiro" class = "tabuleiro">
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>
-        <button class = "celula"></button>  
+    <div id="tabuleiro" class="tabuleiro">
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
     </div>
-    <button id = "reiniciar">Reiniciar jogo</button>
-    <script src = "../Aula_JS/jogodavelha.js"></script>
+    <button id="reiniciar" onclick="iniciarJogo()">Reiniciar jogo</button>
+    <script src="../Aula_JS/jogodavelha.js"></script>
 </body>
+
 </html>
