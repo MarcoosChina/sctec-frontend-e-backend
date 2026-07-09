@@ -10,6 +10,6 @@ switch (letra){
         console.log("A letra " + letra + " é uma vogal.")
         break;
     default:
-        console.log(` A letra ${letra} é uma consoante. `)
+        console.log(" A letra " + letra + " é uma consoante.")
         break;
 }
