@@ -1,5 +1,5 @@
 //receba uma letra e diga se é vogal ou consoante
-let letra = prompt("Digite uma letra: ");
+let letra = "z"
 
 switch (letra){
     case "A":
@@ -7,9 +7,9 @@ switch (letra){
     case "I":
     case "O":
     case "U":
-        console.log("A letra é uma vogal.")
+        console.log("A letra " + letra + " é uma vogal.")
         break;
     default:
-        console.log("A letra é uma consoante.")
+        console.log(` A letra ${letra} é uma consoante. `)
         break;
 }
