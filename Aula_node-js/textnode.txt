@@ -1,0 +1,4 @@
+Node.js é um runtime JavaScript de código aberto, construído sobre o motor V8 do Chrome, 
+que permite executar JavaScript no servidor. Ele fornece um modelo assíncrono orientado 
+a eventos, gerenciamento de pacotes via npm e é usado para criar aplicações web, APIs e 
+serviços em tempo real.
