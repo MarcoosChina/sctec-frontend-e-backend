@@ -9,7 +9,7 @@ let numeroUsuario = parseInt(prompt("Tente adivinhar o número entre 1 e 100:"))
 
 while(numeroUsuario != numAleatorio){
     numeroUsuario  > numAleatorio ? console.log("O número é menor que " + numeroUsuario) : console.log("O número é maior que " + numeroUsuario);
-    numeroUsuario = parseInt(prompt("Tente adivinhar o número entre 1 e 100:"));
+    numeroUsuario = parseInt(prompt("Tente adivinhar o número entre 1 e 100: "));
 }
 
 console.log("Parabéns! Você acertou o número " + numAleatorio);
