@@ -18,6 +18,12 @@ const prompt = require("prompt-sync")();
 let nomeProduto = "";
 let categoria;
 let preco;
+let qtdeElemento = 0;
+let somaTotal = 0;
+let nomeProdutoMaisCaro = "";
+let precoProdutoMaisCaro = 0;
+let continuar;
+
 
 do {
     nomeProduto = prompt("Digite o nome do produto: ");
@@ -48,6 +54,17 @@ do {
         console.log("Produto é caro");
     }
 
+    qtdeElemento++;
+    somaTotal += preco;
+    if (preco > precoProdutoMaisCaro){
+        precoProdutoMaisCaro = preco;
+        nomeProdutoMaisCaro = nomeProduto;
+    }
+
     continuar = prompt("Deseja cadastrar outro produto? (S/N): ");
 
 }while(continuar.toUpperCase() === "S");
+
+console.log("Quantidade de produtos cadastrados: " + qtdeElemento);
+console.log("Soma dos preços: " + somaTotal);
+console.log("Média dos preços: " + (somaTotal / qtdeElemento).toFixed(2));
